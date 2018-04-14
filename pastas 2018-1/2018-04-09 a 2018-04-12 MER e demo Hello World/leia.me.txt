@@ -1,1 +1,15 @@
- 
+1 - Instalar o Node.js (https://nodejs.org/en/);
+
+2 - Crie uma pasta no computador;
+
+3 - Pelo CMD, vá até a pasta que você criou e rode o comando "npm init" sem as aspas;
+
+4 - Ainda pelo CMD, rode o comando "npm install --save botbuilder" sem as aspas;
+
+5 - Na raiz da pasta que você criou no passo 2, cole o arquivo app.js disponivel no GIT; 
+
+6 - Novamente pelo CMD vá até a pasta do projeto e rode o seguinte comando "node app.js" sem as aspas;
+
+7 - Após isso, converse com o bot.
+
+VIDEO MOSTRANDO COMO REALIZAR OS PASSOS 6 E 7 NO GIT
