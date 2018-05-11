@@ -1,13 +1,30 @@
-co http = require('http')
+const express = require('express')
+const app = express()
 const port = 3000
-const ip = 'localhost'
  
-const server = http.createServer((req, res) => {
-  console.log('Recebendo uma request!')
-  res.end('<h1>Aqui fica o que vamos enviar para o navegador como resposta!</h1>')
+app.get('/', (req, res) => {
+  res.send('<h1>Home</h1>')
 })
  
-server.listen(port, ip, () => {
-  console.log(`Servidor rodando em http://${ip}:${port}`)
+app.get('/contato', (req, res) => {
+  res.send(`
+    <h1>Contato</h1>
+ 
+    <form action="/contato" method="POST">
+      <label for="email">Email:</label>
+      <input type="email" name="email" id="email">
+      <label for="mensagem">Mensagem:</label>
+      <textarea name="mensagem" id="mensagem"></textarea>
+      <input type="submit" value="Enviar">
+    </form>
+  `)
+})
+ 
+app.post('/contato', (req, res) => {
+  res.send('<h1>Precisamos aprender a pegar os valor que usuário digitou!</h1>')
+})
+ 
+app.listen(port, () => {
+  console.log(`Servidor rodando em http://localhost:${port}`)
   console.log('Para derrubar o servidor: ctrl + c');
 })
