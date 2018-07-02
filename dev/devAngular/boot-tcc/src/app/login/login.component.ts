@@ -21,10 +21,7 @@ export class LoginComponent implements OnInit {
     return this.username;
   }
 
- public login() {
-  this.router.navigate(["chat"]);
-  /*
-   if (this.username && this.password) {
+ public login() {  
 		 	this.loginService.authenticate(this.username, this.password).subscribe(response => {
 		 		if (response.success) {
           this.router.navigate(["chat"]);
@@ -34,16 +31,7 @@ export class LoginComponent implements OnInit {
 		 	}, () => {
 		 		this.exceptionMessage = 'Não foi possível realizar o login';
 		 	});
-		}
-*/
-    /*
-    if(this.username == 'admin' && this.password == 'admin'){
-      this.router.navigate(["chat"]);
-      }else {
-        alert("Login ou senha incorretos");
-      }
-    }*/
-  }  
+  }
 
   ngOnInit() {
   }

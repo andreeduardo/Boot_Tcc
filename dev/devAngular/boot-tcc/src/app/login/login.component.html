@@ -2,6 +2,12 @@
 <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css">
 
+<div margin-left margin-right *ngIf="exceptionMessage">
+    <p class="alert alert-warning" text-center></p>
+</div>
+
+<div class="card-panel yellow lighten-4 yellow-text text-darken-4" *ngIf="exceptionMessage"><b>Atenção!</b> {{exceptionMessage}}</div>
+
 <div ng-app="App" ng-controller="AppCtrl" layout="row" layout-fill ng-cloak>
   <section layout="column" flex layout-align="center center" class="login" style="width: 50%; margin-left: 450px; margin-top: 50px;">
       <md-card class="md-whiteframe-4dp">
@@ -16,10 +22,10 @@
           <md-card-content>
               <form name="login">
                   <md-input-container class="md-block">
-                      <input [(ngModel)]="username" placeholder="Usuário" name="username" required />
+                      <input [(ngModel)]="username" placeholder="Usuário" (keyup.enter)="login()" name="username" required />
                   </md-input-container>
                   <md-input-container class="md-block">
-                      <input [(ngModel)]="password" placeholder="Senha" type="password" name="Senha" required />
+                      <input [(ngModel)]="password" placeholder="Senha" (keyup.enter)="login()" type="password" name="Senha" required />
                   </md-input-container>
                   <md-input-container class="md-block">
                       <div layout="row" layout-align="center center" style="text-align: center">
