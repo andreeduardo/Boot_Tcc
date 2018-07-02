@@ -2,28 +2,27 @@
 <aiml>
 
 <category>
-	<pattern>* TUDO BEM</pattern>
+	<pattern>*TUDO BEM*</pattern>
 	<template>
 		<random>
-			<li>Tudo em ordem.</li>
-			<li>Muito bem, obrigado.</li>
-			<li>Eu estou bem.</li> 
-			<li>Estou sim</li>
-			<li>Muito bem e você?</li>
-			<li>Tudo legal.</li>
+			<li>Tudo em ordem :D, no que posso ser util hoje?</li>
+			<li>Muito bem, obrigado :D, no que posso ser util hoje?</li>
+			<li>Eu estou bem :D, no que posso ser util hoje?</li> 
+			<li>Estou sim :D, no que posso ser util hoje?</li>
+			<li>Tudo legal :D, no que posso ser util hoje?</li>
 		</random>
 	</template>
 </category>
 
 <category>
-	<pattern>NOTAS</pattern>
+	<pattern>*NOTA*</pattern>
 	<template>
 	Para você visuaizar as notas no sistema DION, você deve clicar sobre sua disciplina na página inicial e a tela irá abrir com a opção de notas já aberta.
 	</template>
 </category>
 
 <category>
-	<pattern>BOLETOS</pattern>
+	<pattern>*BOLETO*</pattern>
 	<template>
 	Para você visuaizar seus boletos no sistema AVA, você deve acessar o menu superior "Área Pessoal" > Menu lateral "Serviços Acadêmicos" > Confirme seus dados de login novamente e por fim clique sobre a opção "Situação Finaneira e Emissão de boletos Bancários".
 	</template>
