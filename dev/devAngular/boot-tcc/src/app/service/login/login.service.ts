@@ -9,13 +9,13 @@ export class LoginService {
 
   constructor(private httpClient: HttpClient) { }
 
-  public enviarMensagem(usuario: string, senha: string): Observable<any> {
+  public authenticate(usuario: string, senha: string): Observable<any> {
 		try {
 			let user = {
 				usuario: usuario,
 				senha: senha
 			};
-			let url: string = `http://localhost:3000/chat`;
+			let url: string = `http://localhost:3000/login`;
 			return this.httpClient.post(url, user);
 		}
 		catch (e) {
