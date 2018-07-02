@@ -2,8 +2,6 @@
 <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css">
 
-
-
 <table style="margin-left: 28%; border: 1px; width: 600px; margin-top: 20px;">
   <tr>
     <td>
@@ -18,6 +16,7 @@
         placeholder="Digite aqui" 
         type="text" 
         required
+        (keyup.enter)="enviarMensagem(msg.value)"
       >
       <a style="margin-left: 45px;" class="waves-effect waves-light btn" (click)="enviarMensagem(msg.value)">Enviar</a>
     </td>

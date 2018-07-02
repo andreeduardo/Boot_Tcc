@@ -1,4 +1,4 @@
-import { LoginComponent } from './../login/login.component';
+import { ChatService } from './../service/chat/chat.service';
 import { Component, NgModule } from '@angular/core';
 
 @Component({
@@ -9,7 +9,7 @@ import { Component, NgModule } from '@angular/core';
 
 export class ChatComponent {
   
-  constructor(private login: LoginComponent) { 
+  constructor(private chat: ChatService) { 
   }
   
   MensagemPadrao= `Duca: Olá, eu sou o Duca! Sou um chatbot em desenvolvimento e até o momento posso lhe ajudar a como você visualiza suas notas ou seus boletos no portal do aluno. 
@@ -17,13 +17,11 @@ export class ChatComponent {
 
   MensagemInicial = '';
   mensagem = "";
-  
-  getUsuario(){
-    return this.login.getUsuario;
-  }
 
-  enviarMensagem(value: string): void {
+  enviarMensagem(value: string) {
+    this.MensagemInicial = "";
     this.mensagem += `\nVocê: ${value}`;
+    this.chat.enviarMensagem(value).subscribe(res => this.mensagem += `\nDuca: ` + res.resposta);
   }
 
   ngOnInit() {
