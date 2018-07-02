@@ -8,7 +8,7 @@ export class ChatService {
 
   constructor(private httpClient: HttpClient) { }
 
-  public authenticate(pPergunta: string): any {
+  public enviarMensagem(pPergunta: string): any {
 		try {
 			let json = {
 				pergunta: pPergunta
